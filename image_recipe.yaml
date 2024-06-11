@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyImageRecipe:
+    Type: 'AWS::ImageBuilder::ImageRecipe'
+    Properties:
+      Name: MyImageRecipe
+      Version: '1.0.0'
+      Components:
+        - ComponentArn: !Ref MyComponent
+      ParentImage: 'arn:aws:imagebuilder:ap-south-1:aws:image/ubuntu-server-18-lts-x86/x.x.x'
+      BlockDeviceMappings:
+        - DeviceName: '/dev/sda1'
+          Ebs:
+            VolumeSize: 8
+            VolumeType: gp2

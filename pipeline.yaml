@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyPipeline:
+    Type: 'AWS::ImageBuilder::Pipeline'
+    Properties:
+      Name: MyPipeline
+      Description: My image pipeline
+      ImageRecipeArn: !Ref MyImageRecipe
+      InfrastructureConfigurationArn: arn:aws:imagebuilder:ap-south-1:058264403909:infrastructure-configuration/redis-ami-62c7d82f-8ca5-49d0-a9a7-26b0fe5150a6

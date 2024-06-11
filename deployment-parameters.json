@@ -1,0 +1,10 @@
+{
+    "Parameters": {
+      "ComponentName": "MyComponent",
+      "ComponentVersion": "1.0.0",
+      "ImageRecipeName": "MyImageRecipe",
+      "ImageRecipeVersion": "1.0.0",
+      "PipelineName": "MyPipeline"
+    }
+  }
+  
